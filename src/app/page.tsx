@@ -47,7 +47,7 @@ export default function Home() {
             <div className="text-center lg:text-left">
               <h2 className="text-accent font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase text-xs sm:text-sm mb-4 sm:mb-6">Our Story</h2>
               <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter mb-6 sm:mb-8 leading-tight text-[#0A0A0A]">
-                LEAVE IT <span className="lg:inline block"></span><span className="text-accent">TO US.</span>
+                LEAVE IT <span className="text-accent whitespace-nowrap">TO US.</span>
               </h3>
               <p className="text-[#0A0A0A]/80 text-base sm:text-lg font-light leading-relaxed mb-6 sm:mb-8">
                 Founded in 2021 in Malaysia, Iotegrity specializes in IoT, data acquisition,
@@ -84,6 +84,6 @@ export default function Home() {
           animation: scroll 30s linear infinite;
         }
       `}</style>
-    </main>
+    </main >
   );
 }

@@ -44,13 +44,13 @@ export default function Services() {
         <section id="services" className="py-16 sm:py-24 lg:py-32 bg-[#E2E2E2] relative">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 sm:mb-16 lg:mb-20 gap-6 sm:gap-8 text-center md:text-left">
-                    <div className="max-w-2xl">
+                    <div className="max-w-2xl mx-auto md:mx-0">
                         <h2 className="text-accent font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase text-xs sm:text-sm mb-3 sm:mb-4">Our Expertise</h2>
                         <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-[#0A0A0A]">
                             BEYOND <span className="italic text-[#0A0A0A]/40">ENGINEERING</span>.
                         </h3>
                     </div>
-                    <p className="text-[#0A0A0A]/70 max-w-sm font-light text-center md:text-right text-sm sm:text-base">
+                    <p className="text-[#0A0A0A]/70 max-w-sm font-light text-center md:text-right text-sm sm:text-base mx-auto md:mx-0">
                         We merge technology with sustainability to create impact that lasts generations.
                     </p>
                 </div>
