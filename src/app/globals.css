@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
+@source "../**/*.{ts,tsx}";
+
 @theme {
   --color-accent: #FF2C00;
   --color-brand-dark: #0A0A0A;
   --color-brand-grey: #E2E2E2;
   --color-brand-light: #FFFFFF;
 
-  --font-heading: "var(--font-manrope)", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "var(--font-inter)", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --animate-fade-in: fadeIn 1s ease-out forwards;
   --animate-fade-in-down: fadeInDown 0.5s ease-out forwards;
   --animate-slide-up: slideUp 0.8s ease-out forwards;
+  --animate-scroll: scroll 30s linear infinite;
 
   @keyframes fadeIn {
     from {
@@ -46,6 +49,16 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 :root {
@@ -60,11 +73,15 @@
   }
 }
 
-/* Base Styles */
+/* Base resets for Next.js 15+ parity */
 @layer base {
   body {
-    @apply bg-[var(--background)] text-[var(--foreground)] antialiased overflow-x-hidden;
-    font-family: var(--font-body);
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   h1,
@@ -73,11 +90,10 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-heading);
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   }
 }
 
-/* Custom Utilities */
 @layer utilities {
   .glass {
     @apply bg-white/5 backdrop-blur-md border border-white/10;
@@ -102,19 +118,5 @@
 
   .delay-300 {
     animation-delay: 300ms;
-  }
-
-  .animate-scroll {
-    animation: scroll 30s linear infinite;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-50%);
-    }
   }
 }
