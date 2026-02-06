@@ -24,7 +24,7 @@ export default function Hero() {
             {/* Hero Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/hero%20images/ioteg-hero-desktop.png"
+                    src="/hero-images/ioteg-hero-desktop.png"
                     alt="IOTEG Engineering Solutions"
                     fill
                     priority

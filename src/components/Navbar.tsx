@@ -18,16 +18,16 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[80px] flex items-center ${scrolled
-                    ? "bg-brand-dark/95 backdrop-blur-md shadow-2xl border-b border-white/5"
-                    : "bg-brand-dark/80 backdrop-blur-md"
+                    ? "bg-white/90 backdrop-blur-md shadow-lg"
+                    : "bg-white/60 backdrop-blur-sm"
                 }`}
         >
             <div className="mx-auto max-w-[1536px] px-6 w-full flex justify-between items-center">
                 <Link href="/" className="flex items-center">
                     <img
-                        src="/Logo image/ioteg-logo.png"
+                        src="/logo-image/ioteg-logo.png"
                         alt="IOTEG Logo"
-                        className={`transition-all duration-300 ${scrolled ? "h-12" : "h-16"} w-auto hover:scale-105 brightness-0 invert`}
+                        className={`transition-all duration-300 ${scrolled ? "h-12" : "h-16"} w-auto hover:scale-105`}
                     />
                 </Link>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
                 {/* Mobile Toggle */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-white z-50 p-2"
+                    className="md:hidden text-[#0A0A0A] z-50 p-2"
                     aria-label="Toggle menu"
                 >
                     {isOpen ? (
@@ -64,7 +64,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-brand-dark/95 backdrop-blur-xl flex flex-col justify-center items-center space-y-8 z-40 animate-fade-in-down">
+                <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center space-y-8 z-40 animate-fade-in-down">
                     <MobileNavLink href="#services" onClick={() => setIsOpen(false)}>Services</MobileNavLink>
                     <MobileNavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
                     <MobileNavLink href="#about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
@@ -85,7 +85,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
     return (
         <Link
             href={href}
-            className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-widest relative group"
+            className="text-[#0A0A0A]/80 hover:text-accent transition-colors font-medium text-sm uppercase tracking-widest relative group"
         >
             {children}
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full" />
@@ -98,7 +98,7 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
         <Link
             href={href}
             onClick={onClick}
-            className="text-white/90 hover:text-accent transition-colors font-bold text-2xl uppercase tracking-widest"
+            className="text-[#0A0A0A] hover:text-accent transition-colors font-bold text-2xl uppercase tracking-widest"
         >
             {children}
         </Link>
