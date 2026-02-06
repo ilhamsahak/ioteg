@@ -73,17 +73,6 @@ export default function Home() {
       <Stats />
       <Projects />
       <Footer />
-
-      {/* Global CSS for the scroll animation */}
-      <style jsx global>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-        }
-      `}</style>
     </main >
   );
 }

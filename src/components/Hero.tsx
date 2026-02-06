@@ -28,7 +28,7 @@ export default function Hero() {
                     alt="IOTEG Engineering Solutions"
                     fill
                     priority
-                    className="object-cover object-center lg:object-right-center"
+                    className="object-cover object-center lg:object-right"
                     sizes="100vw"
                 />
             </div>
