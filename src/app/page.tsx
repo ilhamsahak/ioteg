@@ -49,7 +49,7 @@ export default function Home() {
               <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter mb-6 sm:mb-8 leading-tight text-[#0A0A0A]">
                 LEAVE IT <span className="text-accent whitespace-nowrap">TO US.</span>
               </h3>
-              <p className="text-[#0A0A0A]/80 text-base sm:text-lg font-light leading-relaxed mb-6 sm:mb-8">
+              <p className="text-[#0A0A0A]/80 text-base sm:text-lg font-light leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
                 Founded in 2021 in Malaysia, Iotegrity specializes in IoT, data acquisition,
                 automation, and renewable energy. We provide innovative solutions for food
                 security, production, and education.

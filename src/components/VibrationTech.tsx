@@ -7,15 +7,15 @@ export default function VibrationTech() {
             <div className="absolute inset-0 bg-grid opacity-10" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[150px]" />
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center py-10 sm:py-20">
                     {/* Left Side - Content */}
-                    <div className="order-2 lg:order-1">
+                    <div className="order-2 lg:order-1 text-center lg:text-left">
                         <div className="inline-block px-4 py-1.5 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs font-bold tracking-[0.2em] uppercase mb-6">
                             COMING SOON
                         </div>
 
-                        <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white">
                             RIDE <span className="text-accent">SMOOTHER.</span><br />
                             FEEL <span className="text-accent">BETTER.</span>
                         </h2>
