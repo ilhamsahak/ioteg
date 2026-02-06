@@ -20,9 +20,9 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative h-[100svh] flex items-center overflow-hidden bg-brand-dark">
+        <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-brand-dark pt-24 sm:pt-20">
             {/* Optimized Background Image Container */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 top-0">
                 {/* Desktop Background */}
                 <div className="hidden md:block absolute inset-0">
                     <Image
@@ -51,15 +51,15 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-brand-dark/20" />
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full py-8 sm:py-12">
                 <div className="max-w-4xl" ref={containerRef} style={{ transition: 'transform 0.1s ease-out', perspective: '1000px' }}>
-                    <div className="inline-block w-full max-w-xl p-8 sm:p-12 lg:p-14 bg-white/[0.03] backdrop-blur-md rounded-[2.5rem] sm:rounded-[3.5rem] border border-white/10 shadow-2xl relative overflow-hidden group text-center sm:text-left">
+                    <div className="inline-block w-full max-w-xl p-8 sm:p-10 lg:p-12 bg-white/[0.03] backdrop-blur-md rounded-[2.5rem] sm:rounded-[3.5rem] border border-white/10 shadow-2xl relative overflow-hidden group text-center sm:text-left">
                         <div className="relative z-10">
                             <div className="inline-block px-3 sm:px-4 py-1.5 rounded-full border border-white/20 bg-white/5 text-white/90 text-[10px] sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-6 sm:mb-8 animate-fade-in">
                                 ESTABLISHED 2021
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight mb-6 sm:mb-8 leading-[0.9] text-white transition-all duration-500 hover:scale-[1.02] cursor-default group/title font-heading italic">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight mb-6 sm:mb-8 leading-[0.9] text-white transition-all duration-500 hover:scale-[1.02] cursor-default group/title font-heading italic">
                                 INNOVATIVE <br />
                                 <span className="text-accent transition-all duration-500 group-hover/title:drop-shadow-[0_0_20px_rgba(255,44,0,0.4)]">SOLUTIONS</span>
                             </h1>
