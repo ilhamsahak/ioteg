@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       <div id="about" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="mx-auto max-w-[1536px] px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-20 items-center">
             <div className="relative group">
               <div className="absolute -inset-4 bg-accent/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />

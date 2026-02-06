@@ -17,15 +17,17 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-sm shadow-md py-3" : "bg-white/60 backdrop-blur-sm py-3"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[80px] flex items-center ${scrolled
+                    ? "bg-brand-dark/95 backdrop-blur-md shadow-2xl border-b border-white/5"
+                    : "bg-brand-dark/80 backdrop-blur-md"
                 }`}
         >
-            <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <div className="mx-auto max-w-[1536px] px-6 w-full flex justify-between items-center">
                 <Link href="/" className="flex items-center">
                     <img
                         src="/Logo image/ioteg-logo.png"
                         alt="IOTEG Logo"
-                        className={`transition-all duration-300 ${scrolled ? "h-14" : "h-20"} w-auto hover:scale-105`}
+                        className={`transition-all duration-300 ${scrolled ? "h-12" : "h-16"} w-auto hover:scale-105 brightness-0 invert`}
                     />
                 </Link>
 
@@ -36,7 +38,7 @@ export default function Navbar() {
                     <NavLink href="#about">About</NavLink>
                     <Link
                         href="#contact"
-                        className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
+                        className="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95 shadow-[0_4px_20px_rgba(255,44,0,0.2)] hover:shadow-[0_8px_30px_rgba(255,44,0,0.4)]"
                     >
                         Consultation
                     </Link>
@@ -45,7 +47,7 @@ export default function Navbar() {
                 {/* Mobile Toggle */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-[#0A0A0A] z-50 p-2"
+                    className="md:hidden text-white z-50 p-2"
                     aria-label="Toggle menu"
                 >
                     {isOpen ? (
@@ -62,19 +64,17 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg border-t border-[#0A0A0A]/10">
-                    <div className="container mx-auto px-4 py-6 space-y-4">
-                        <MobileNavLink href="#services" onClick={() => setIsOpen(false)}>Services</MobileNavLink>
-                        <MobileNavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
-                        <MobileNavLink href="#about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
-                        <Link
-                            href="#contact"
-                            onClick={() => setIsOpen(false)}
-                            className="block w-full text-center bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg shadow-accent/20"
-                        >
-                            Consultation
-                        </Link>
-                    </div>
+                <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-brand-dark/95 backdrop-blur-xl flex flex-col justify-center items-center space-y-8 z-40 animate-fade-in-down">
+                    <MobileNavLink href="#services" onClick={() => setIsOpen(false)}>Services</MobileNavLink>
+                    <MobileNavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
+                    <MobileNavLink href="#about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
+                    <Link
+                        href="#contact"
+                        onClick={() => setIsOpen(false)}
+                        className="mt-4 bg-accent hover:bg-accent/90 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-[0_4px_20px_rgba(255,44,0,0.2)] hover:shadow-[0_8px_30px_rgba(255,44,0,0.4)]"
+                    >
+                        Consultation
+                    </Link>
                 </div>
             )}
         </nav>
@@ -85,9 +85,10 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
     return (
         <Link
             href={href}
-            className="text-[#0A0A0A]/70 hover:text-accent transition-colors font-semibold text-sm uppercase tracking-wider"
+            className="text-white/80 hover:text-white transition-colors font-medium text-sm uppercase tracking-widest relative group"
         >
             {children}
+            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full" />
         </Link>
     );
 }
@@ -97,7 +98,7 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
         <Link
             href={href}
             onClick={onClick}
-            className="block text-[#0A0A0A] hover:text-accent transition-colors font-semibold text-lg uppercase tracking-wider py-2"
+            className="text-white/90 hover:text-accent transition-colors font-bold text-2xl uppercase tracking-widest"
         >
             {children}
         </Link>

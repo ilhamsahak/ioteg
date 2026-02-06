@@ -145,7 +145,7 @@ const projects = [
 export default function Projects() {
     return (
         <section id="projects" className="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
-            <div className="container mx-auto px-4 sm:px-6">
+            <div className="mx-auto max-w-[1536px] px-6">
                 {/* Redesigned Header Section */}
                 <div className="relative mb-12 sm:mb-16 lg:mb-20">
                     {/* Subtle Background Text */}

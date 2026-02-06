@@ -7,7 +7,7 @@ export default function VibrationTech() {
             <div className="absolute inset-0 bg-grid opacity-10" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[150px]" />
 
-            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="mx-auto max-w-[1536px] px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center py-10 sm:py-20">
                     {/* Left Side - Content */}
                     <div className="order-2 lg:order-1 text-center lg:text-left">

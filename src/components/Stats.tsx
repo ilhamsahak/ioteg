@@ -11,7 +11,7 @@ export default function Stats() {
     return (
         <section className="py-12 sm:py-16 lg:py-24 bg-accent relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-full bg-grid opacity-10" />
-            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <div className="mx-auto max-w-[1536px] px-6 relative z-10">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 text-center text-white">
                     {stats.map((s, i) => (
                         <div key={i} className="flex flex-col items-center">
